@@ -30,14 +30,24 @@ header h1 {
 
 main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
-  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
   main {
-    grid-template-columns: 2fr 1fr;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  #signup-container {
+    max-width: 350px;
+    min-width: 300px;
+  }
+  #activities-container {
+    max-width: 600px;
+    min-width: 350px;
   }
 }
 
@@ -47,7 +57,22 @@ section {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 500px;
+  margin-bottom: 10px;
+}
+.register-btn {
+  margin-top: 10px;
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.register-btn:hover {
+  background-color: #388e3c;
 }
 
 section h3 {
